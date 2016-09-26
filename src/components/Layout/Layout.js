@@ -13,15 +13,18 @@ import s from './Layout.css';
 import Header from '../Header';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 function Layout({ children }) {
   return (
-    <div>
-      <Header />
-      {React.Children.only(children)}
-      <Feedback />
-      <Footer />
-    </div>
+    <MuiThemeProvider>
+      <div>
+        <Header />
+        {React.Children.only(children)}
+        <Feedback />
+        <Footer />
+      </div>
+    </MuiThemeProvider>  
   );
 }
 

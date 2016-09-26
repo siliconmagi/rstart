@@ -13,12 +13,17 @@ import s from './Header.css';
 import Link from '../Link';
 import Navigation from '../Navigation';
 import logoUrl from './logo-small.png';
+import AppBar from 'material-ui/AppBar';
 
 function Header() {
   return (
     <div className={s.root}>
       <div className={s.container}>
         <Navigation className={s.nav} />
+          <AppBar
+            title="Title"
+            iconClassNameRight="muidocs-icon-navigation-expand-more"
+          />
         <Link className={s.brand} to="/">
           <img src={logoUrl} width="38" height="38" alt="React" />
           <span className={s.brandTxt}>Your Company</span>
